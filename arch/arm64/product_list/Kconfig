@@ -1,0 +1,111 @@
+menuconfig YULONG_PRODUCT
+	bool "Enable yulong product configs"
+	default n
+	help
+	  YULONG_PRODUCT only enabled from yl_config.sh to indicate that
+	  it is yulong products, and the product name and hardware version
+	  shall be defined.
+
+if YULONG_PRODUCT
+config YL_DEBUG
+	bool "yulong debug"
+	help
+	  CONFIG_YL_DEBUG will be enable in eng version, but disable in usr version.
+	  You can use CONFIG_YL_DEBUG to print more debug message without impact
+	  release version.
+
+choice
+	prompt "Yulong project name"
+	default BOARD_CPSAMPLE
+
+config BOARD_CPSAMPLE
+	bool "CPSAMPLE board"
+	depends on ARCH_MSM8916
+	help
+	  Support for Yulong CPSAMPLE product
+
+config BOARD_C1
+	bool "C1 board"
+	depends on ARCH_MSM8916
+	help
+	 Support for Letv C1 product (MSM8976)
+
+config BOARD_C2
+        bool "C2 board"
+        depends on ARCH_MSM8916
+        help
+         Support for Letv C2 product (MSM8976)
+
+config BOARD_C107
+        bool "C107 board"
+        depends on ARCH_MSM8916
+        help
+         Support for Letv C107 product (MSM8976)
+endchoice
+
+choice
+	prompt "Yulong hardware version"
+	default BOARD_VER_T0
+
+config BOARD_VER_T0
+	bool "hardware version T0"
+	help
+	  This is hareware version T0
+
+config BOARD_VER_T1
+	bool "hardware version T1"
+	help
+	  This is hareware version T1
+
+config BOARD_VER_T2
+	bool "hardware version T2"
+	help
+	  This is hareware version T2
+
+config BOARD_VER_T3
+	bool "hardware version T3"
+	help
+	  This is hareware version T3
+
+config BOARD_VER_T4
+	bool "hardware version T4"
+	help
+	  This is hareware version T4
+
+config BOARD_VER_P0
+	bool "hardware version P0"
+	help
+	  This is hareware version P0
+
+config BOARD_VER_P1
+	bool "hardware version P1"
+	help
+	  This is hareware version P1
+
+config BOARD_VER_P2
+	bool "hardware version P2"
+	help
+	  This is hareware version P2
+
+config BOARD_VER_P3
+	bool "hardware version P3"
+	help
+	  This is hareware version P3
+
+config BOARD_VER_P4
+	bool "hardware version P4"
+	help
+	  This is hareware version P4
+
+endchoice
+endif
+
+#Date			Author			Why					jira
+#2015-12-19		xingbin		add s2_msm8952.dtsi		LAFITE-237
+#========================================================
+#==========QL1530 CONFIG BEGIN===========================
+config PRODUCT_S2
+	depends on ARCH_MSM8916
+	bool "PRODUCT_S2 Support"
+	help
+	  Fix version type as PRODUCT_S2

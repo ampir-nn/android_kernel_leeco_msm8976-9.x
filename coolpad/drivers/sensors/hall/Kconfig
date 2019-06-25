@@ -1,0 +1,4 @@
+config YL_SENSORS_HALL
+	tristate "hall sensor"
+	help
+	  hall sensor Driver

@@ -1,0 +1,90 @@
+#############################
+#  configs for touch        #
+#############################
+# 1.close Qualcomm sensor configs
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_CORE_v21=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_RMI_DEV_v21=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_FW_UPDATE_v21=n
+CONFIG_TOUCHSCREEN_ATMEL_MXT=n
+CONFIG_TOUCHSCREEN_FT5X06=n
+CONFIG_TOUCHSCREEN_MSTAR21XX=n
+CONFIG_TOUCHSCREEN_GEN_VKEYS=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_RMI4=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_RMI4_DEV=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_FW_UPDATE=n
+CONFIG_TOUCHSCREEN_BU21150=n
+# 2.add YL TP config
+CONFIG_TOUCHSCREEN_GOODIX_TS=y
+
+#############################
+#  configs for LCD          #
+#############################
+CONFIG_YL_LCD_VDDI_ENABLE_GPIO=y
+
+#############################
+#  configs for sensors      #
+#############################
+CONFIG_YL_SENSORS=y
+CONFIG_MSM_RTB=y
+CONFIG_MSM_RTB_SEPARATE_CPUS=y
+#CONFIG_YL_SENSORS_HALL=n is not set
+
+#############################
+#  configs for LED          #
+#############################
+# CONFIG_YL_LEDS_AW2013=y
+CONFIG_LEDS_AW2013=y
+
+#############################
+#  configs for camera       #
+#############################
+
+#############################
+#  configs for camera LED   #
+#############################
+
+#############################
+#  configs for NFC          #
+#############################
+
+#############################
+#  configs for type-c       #
+#############################
+#CONFIG_USB_EXT_TYPE_C_NXP=y
+#CONFIG_TYPE_C_INFO=y
+CONFIG_USB_TYPEC_FUSB302=y
+CONFIG_USB_TYPEC_PD_SUPPORT=y
+CONFIG_YL_FAIRCHILDIC_USB_TYPEC=y
+
+#############################
+#  configs fingerprint      #
+#############################
+CONFIG_INPUT_FINGERPRINT=y
+CONFIG_GOODIX_FP=y
+
+#############################
+#  configs for pstore       #
+#############################
+CONFIG_PSTORE=y
+CONFIG_PSTORE_CONSOLE=y
+CONFIG_PSTORE_RAM=y
+CONFIG_PSTORE_FTRACE=y
+#CONFIG_DEBUG_FS=y
+#CONFIG_FUNCTION_TRACER=y
+CONFIG_YL_PSTORE=y
+#############################
+#  misc                     #
+#############################
+CONFIG_MMC_YL_PARAMS=y
+CONFIG_BOOTREASON=y
+CONFIG_CREATE_NODE=y
+CONFIG_YL_FEATURE_CHARGE=y
+CONFIG_YL_5V_CHG=y
+############################
+# confing   for vibrator   #
+############################
+CONFIG_YL_SET_VOLTAGE_LEVEL=y
+##########################
+##config for infrared   ##
+##########################
+CONFIG_INFRARED_UEI1700=y

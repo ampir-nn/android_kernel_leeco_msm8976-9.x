@@ -1,0 +1,44 @@
+###########################################
+## 	Kconfig for sensors devices	 ##
+## 	Author:LongJiang		 ##
+## 	Date:2013-09-13			 ##
+###########################################
+
+menu "Coolpad Sensors Device Drivers"
+
+config YL_SENSORS_DEBUG
+	tristate "Generic sensors debug config" if EXPERT
+	default n
+	help
+	  Say Y here if you want to debug the sensors
+	  Say N here if you do not want to debug the sensors
+
+	  If unsure, say Y.
+
+config YL_SENSORS
+	tristate "Generic sensor layer (needed for accelerometer, ambient, proximity, ...)" if EXPERT
+	default y
+	help
+	  Say Y here if you have any sensor device (accelerometer, light, proximity,
+	  compass, ...) connected to your system and want it to be available to applications.
+
+	  Say N here if you have a headless (no proximity, no compass) system.
+
+	  If unsure, say Y.
+
+if YL_SENSORS
+
+source "coolpad/drivers/sensors/sensparams/Kconfig"
+
+source "coolpad/drivers/sensors/accel/Kconfig"
+
+source "coolpad/drivers/sensors/alsprox/Kconfig"
+
+source "coolpad/drivers/sensors/hall/Kconfig"
+
+source "coolpad/drivers/sensors/remote/Kconfig"
+
+source "coolpad/drivers/sensors/invensense/Kconfig"
+endif
+
+endmenu

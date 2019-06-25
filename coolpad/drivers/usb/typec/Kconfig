@@ -1,0 +1,6 @@
+config USB_TYPEC_FUSB302
+	boolean "USB 2.0 TYPE C"
+config USB_TYPEC_PD_SUPPORT
+	boolean "pd	SUPPORT"
+config YL_FAIRCHILDIC_USB_TYPEC
+	boolean "fairchild TYPEC IC"

@@ -1,0 +1,9 @@
+#
+# IIO imu drivers configuration
+#
+menu "Inertial measurement units"
+
+source "coolpad/drivers/sensors/invensense/imu/inv_mpu/Kconfig"
+
+endmenu
+

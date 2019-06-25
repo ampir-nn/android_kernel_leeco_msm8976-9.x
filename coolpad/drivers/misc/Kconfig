@@ -1,0 +1,22 @@
+#
+# Misc strange devices
+#
+
+config BOOTREASON
+	bool "yulong bootreason"
+	default y
+	help
+	  Yulong bootreason
+
+#added by zhuhui 2014.2.28
+config CREATE_NODE
+	bool "Call State file Node"
+	default n
+	help
+	  Create Call State file Node Driver.
+#added by Eric for uei driver 20160420
+config INFRARED_UEI1700
+	bool "UEI REMOTE driver"
+        default n
+        help
+          Create uei1700 infrared Driver.

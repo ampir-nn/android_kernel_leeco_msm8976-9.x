@@ -1,0 +1,48 @@
+
+qcom,yl_batterydata_cpld403_lishen_4000mah {
+	qcom,max-voltage-uv = <4400000>;
+	qcom,nom-batt-capacity-mah = <4060>;
+	qcom,batt-id-kohm = <220>;
+	qcom,battery-beta = <3435>;
+	qcom,battery-type = "yl_batterydata_cpld403_lishen_4000mah";
+	qcom,chg-rslow-comp-c1 = <2747494>;
+	qcom,chg-rslow-comp-c2 = <3488661>;
+	qcom,chg-rs-to-rslow = <559913>;
+	qcom,chg-rslow-comp-thr = <0x9A>;
+	qcom,checksum = <0xD861>;
+	qcom,gui-version = "PMI8950GUI - 2.0.0.16";
+	qcom,fg-profile-data = [
+		 E4 83 04 7D
+		 49 81 B0 77
+		 5E 83 FB 6D
+		 B0 88 F4 8F
+		 67 82 1F 98
+		 E9 B5 AD C1
+		 57 17 06 88
+		 15 7E 0F 82
+		 96 7C 53 83
+		 18 6A F1 78
+		 47 86 50 82
+		 D6 99 47 BD
+		 70 CA 58 0D
+		 2D 10 ED 5A
+		 14 70 E0 FC
+		 49 3E 9C 44
+		 93 41 00 00
+		 1E 47 BC 30
+		 8E 3A 00 00
+		 00 00 00 00
+		 00 00 00 00
+		 9C 69 41 68
+		 97 7A D7 90
+		 7C 76 48 70
+		 43 52 76 81
+		 80 74 90 69
+		 0D 7C A1 A8
+		 1B 09 60 74
+		 5D A0 71 0C
+		 28 00 FF 36
+		 F0 11 30 03
+		 00 00 00 0C
+	];
+};

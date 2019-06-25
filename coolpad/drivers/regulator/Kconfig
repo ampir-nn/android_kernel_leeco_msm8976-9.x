@@ -1,0 +1,18 @@
+
+config YL_TPS65132
+	default n
+	bool "TPS65132 Dual Output Power Supply"
+	---help---
+	  The TPS65132 is designed to support general positive/negative driven
+	  applications. The device uses a single inductor scheme in order to
+	  provide the user the smallest solution size possible as well as high
+	  efficiency. With its input voltage range of 2.5 V to 5.5 V, it is
+	  optimized for products powered by single-cell batteries (Li-Ion,
+	  Ni-Li, Li-Polymer) and output currents up to 80 mA.
+
+config YL_TPS65132_5_5
+	default n
+	bool "YL_TPS65132 5.5v power LCD Supply"
+	---help---
+	  YL_TPS65132_5_5.
+

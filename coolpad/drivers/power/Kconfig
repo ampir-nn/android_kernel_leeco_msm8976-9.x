@@ -1,0 +1,61 @@
+
+config YL_PM8916_VBUS
+	tristate "yulong pm8916 vbus driver"
+	depends on SPMI
+	depends on OF_SPMI
+	depends on MSM_QPNP_INT
+	depends on THERMAL_QPNP_ADC_TM
+	help
+	  Say Y here to enable the yulong pm8916 VBUS driver
+
+config YL_FAN5405_CHARGER
+	tristate "fan5405 charger driver"
+	depends on I2C
+	help
+	  Say Y here to enable the fan5405 sm charge driver
+
+config YL_BQ24157_CHARGER
+	tristate "bq24157 charger driver"
+	depends on I2C
+	help
+	  Say Y here to enable the fan5405 sm charge driver
+
+config YL_LC709203_FUELGAUGE
+	tristate "lc709203 fuelgauge driver"
+	depends on I2C
+	help
+	  Say Y here to enable the lc709203 fuelgauge driver
+
+config YL_ADC_BATTERY
+	tristate "yulong adc battery driver"
+	help
+	  Say Y here to enable the yulong adc battery driver
+
+config USE_QC_BMS_BATT_FORMAT
+	bool "yulong adc battery driver"
+	help
+	  Say Y here to use BMS battery format for yl_adc_battery
+config PRORITIZE_LOAD_LC709203
+	bool "proritize load lc709203 driver"
+	help
+	  Say Y here to proritize load lc709203
+
+#modify begin by sunxiaogang for codes platform design 2014.12.22
+config CHARGE_CONFIG_MICROMAX
+        bool "yulong bq24157 charger driver"
+        help
+          Say Y here to use micromax configs for yl_bq124157_charger
+#modify end
+
+config YL_CHARGE_MODE
+        bool "select for fast or normal charging"
+        default n
+        help
+          Say Y to enable charge mode.
+
+config YL_BQ25890_CHARGER
+       tristate "bq25890 Charger driver"
+       depends on I2C
+       help
+         Say Y here to enable the bq25890 charge driver
+

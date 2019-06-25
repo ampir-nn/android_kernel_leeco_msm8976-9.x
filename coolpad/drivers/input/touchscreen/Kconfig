@@ -1,0 +1,143 @@
+#
+# Touchscreen driver configuration
+
+#add by litao3 2013.12.28 begin
+config TOUCHSCREEN_FOCALTECH
+	tristate "focaltech ft5x0x touchscreen"
+	depends on I2C
+	help
+	  Say Y here if you want support for Focaltech touchscreen.
+
+	  If unsure, say Y.
+	  To compile this driver as a module, choose M here: the
+	  module will be called ft5x0x_ts
+#add by litao3 2013.12.28 end
+
+config TOUCHSCREEN_FOCALTECH_TS
+	tristate "focaltech ft6x36 touchscreen"
+	depends on I2C
+	help
+	  Say Y here if you want support for Focaltech touchscreen.
+
+	  If unsure, say Y.
+	  To compile this driver as a module, choose M here: the
+	  module will be called ft6x36_ts
+
+config TOUCHSCREEN_GOODIX
+	tristate "Goodix I2C touchscreen"
+	depends on I2C
+	help
+	  Say Y here if you have a Goodix I2C touchscreen
+	  connected to your system.
+
+	  If unsure, say N.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called goodix_ts.
+
+config TOUCHSCREEN_GOODIX_TS
+	bool "Goodix touchpanel GT9xx series"
+	depends on I2C
+	help
+	  Say Y here if you have a Goodix GT9xx touchscreen.
+	  Gt9xx controllers are multi touch controllers which can
+	  report 5 touches at a time.
+	  If unsure, say N.
+
+config TOUCHSCREEN_GT1XX
+	bool "Goodix touchpanel GT1xx series"
+	depends on I2C
+	help
+	  Say Y here if you have a Goodix GT11XX touchscreen.
+	  Gt9xx controllers are multi touch controllers which can
+	  report 5 touches at a time.
+
+	  If unsure, say N.
+
+config TOUCHSCREEN_SYNAPTICS_TS
+	tristate "Synaptics  RMI4 touchscreen"
+	depends on I2C
+	help
+	  Say Y here if you have a Synaptics I2C touchscreen
+	  connected to your system.
+
+	  If unsure, say N.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called RMI4_TS.
+
+config TOUCHSCREEN_FOCALTECH_5446
+	bool "Focaltech ft5446"
+	depends on I2C
+	help
+	  Say Y here if you have a focaltech 5446 touchscreen.
+	  ft5446 controllers are multi touch controllers which can
+	  report 5 touches at a time.
+
+	  If unsure, say N.
+
+config TOUCHSCREEN_FOCALTECH_5346
+	bool "Focaltech ft5346"
+	depends on I2C
+	help
+	  Say Y here if you have a focaltech 5346 touchscreen.
+	  ft5346 controllers are multi touch controllers which can
+	  report 5 touches at a time.
+
+	  If unsure, say N.
+
+config TOUCHSCREEN_SYNAPTICS_TS_TEST_REPORTING
+	bool "Synaptics_dsx test reporting"
+	depends on TOUCHSCREEN_SYNAPTICS_TS
+	default n
+	help
+	  Say Y here if you need to do advanced test for the TW IC.
+
+	  synaptics_dsx_test_reporting.c will provide you some devnode for you.
+	  such as input0/f54/noise_density, input0/f54/get_report,input0/f54/force_cal,etc..
+	  The devnodes are writeable,this will cause the CTS test not pass.
+
+config TOUCHSCREEN_HAL
+	tristate "platform touchscreens dev: HAL for Factory Mode Test"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you need the platform touchscreens HAL dev for Factory Mode Test
+
+config FACTORY_TW_FIRMWARE_UPDATE
+	tristate "The flag of TW firmware update only in factory mode"
+	default n
+	help
+	  Say Y here if you don't want to update TW firmware when power on.
+
+config TOUCHSCREEN_GESTURE_WAKEUP
+	bool "touchscreen gesture wakeup function"
+	depends on I2C
+	default n
+	help
+	  Say Y here to enable support for gesture wakeup.
+	  If unsure, say N.
+
+config TOUCHSCREEN_GLOVE
+	bool "touchscreen glove mode support"
+	depends on I2C
+	default n
+	help
+	  Say Y here to enable support for glove.
+	  If unsure, say N.
+
+
+config TOUCHSCREEN_SYNAPTICS_DSX
+	tristate "Synaptics DSX touchscreen"
+	depends on I2C
+	help
+	  Say Y here if you have a Synaptics I2C touchscreen
+	  connected to your system.
+
+	  If unsure, say N.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called RMI4_DSX.
+
+#for sharp touchscreen
+source "coolpad/drivers/input/touchscreen/shtsc/Kconfig"

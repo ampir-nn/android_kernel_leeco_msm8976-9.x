@@ -1,0 +1,30 @@
+###########################################
+## 	Kconfig for alsprox sensors devices
+## 	Author:LongJiang
+## 	Date:2013-09-13
+############################################
+
+menu "alsprox-sensor Device Drivers"
+
+config YL_SENSORS_ALSPROX
+	tristate "Generic sensor layer (needed for tmd277x, ltr55x, ...)" if EXPERT
+	default y
+	help
+	  Say Y here if you have any sensor device (tmd277x, ltr55x, ...)
+	  connected to your system and want it to be available to applications.
+
+	  Say N here if you have a headless (no tmd277x, no ltr55x) system.
+
+	  If unsure, say Y.
+
+if YL_SENSORS_ALSPROX
+
+source "coolpad/drivers/sensors/alsprox/ltr559/Kconfig"
+source "coolpad/drivers/sensors/alsprox/ltr559_2input/Kconfig"
+source "coolpad/drivers/sensors/alsprox/ltr558/Kconfig"
+source "coolpad/drivers/sensors/alsprox/tmd277x/Kconfig"
+source "coolpad/drivers/sensors/alsprox/pa12200001/Kconfig"
+
+endif
+
+endmenu

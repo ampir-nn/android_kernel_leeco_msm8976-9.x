@@ -1,0 +1,12 @@
+#
+# MMC/SD card drivers
+#
+
+config MMC_YL_PARAMS
+	bool "yl_params.c"
+	default n
+	help
+	  Say Y here to enable deferred MMC resume until I/O
+	  is requested. This will reduce overall resume latency and
+	  save power when theres an SD card inserted but not being used.
+
