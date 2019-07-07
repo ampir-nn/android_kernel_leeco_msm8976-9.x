@@ -12,8 +12,8 @@
  */
 
 #include "skeleton64.dtsi"
-#include </home/revenger/ros/kernel/coolpad/msm8976/include/dt-bindings/clock/msm-clocks-8976.h>
-#include </home/revenger/ros/kernel/coolpad/msm8976/include/dt-bindings/regulator/qcom,rpm-smd-regulator.h>
+#include </home/arnab/n2/kernel/coolpad/msm8976/include/dt-bindings/clock/msm-clocks-8976.h>
+#include </home/arnab/n2/kernel/coolpad/msm8976/include/dt-bindings/regulator/qcom,rpm-smd-regulator.h>
 
 / {
 	model = "Qualcomm Technologies, Inc. MSM 8976";
